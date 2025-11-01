@@ -23,10 +23,10 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://frozenlake298.github.io"
+url: "https://frozenlake208.github.io"
 
 github:
-  username: frozenlake298
+  username: frozenlake208
 
 twitter:
   username: _thanhnt
@@ -36,8 +36,8 @@ social:
   email: tienthanh.se@gmail.com
   links:
     - https://x.com/_thanhnt
-    - https://github.com/frozenlake298
-    - https://www.facebook.com/thanhnt298
+    - https://github.com/frozenlake208
+    - https://www.facebook.com/thanhnt208
     - https://www.linkedin.com/in/thanh-nt
 
 # Site Verification Settings
