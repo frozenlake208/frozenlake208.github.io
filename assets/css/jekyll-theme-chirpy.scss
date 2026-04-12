@@ -1,0 +1,376 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main{%- if jekyll.environment == 'production' -%}.bundle{%- endif -%}';
+
+/* append your custom style below */
+
+/* Sketchy Font */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+:root {
+  --font-family-base: 'Patrick Hand', 'Comic Sans MS', cursive, sans-serif !important;
+  --font-family-heading: 'Patrick Hand', 'Comic Sans MS', cursive, sans-serif !important;
+}
+
+/* Universal Base Scale Up */
+html {
+  font-size: 19px !important; 
+}
+
+body {
+  font-family: var(--font-family-base) !important;
+  line-height: 1.7 !important;
+}
+
+/* Global Color Variable Overrides for Perfect Synchronization */
+html[data-mode="light"], html[data-theme="light"] {
+  --main-bg: #fff4cc !important; /* Body yellow */
+  --card-bg: #fff4cc !important;
+  --sidebar-bg: #ffffff !important; /* Sidebar & Utility White */
+  --sidebar-text-strong: #000000 !important;
+}
+
+html[data-mode="dark"], html[data-theme="dark"] {
+  --main-bg: #1a1a1c !important; 
+  --card-bg: #1a1a1c !important;
+  --sidebar-bg: #1b1b1e !important;
+  --sidebar-text-strong: #ffffff !important;
+}
+
+/* Hard text colours for sidebar items */
+#sidebar, #sidebar a, #sidebar p, #sidebar span, #sidebar i {
+  color: var(--sidebar-text-strong) !important;
+}
+
+html[data-mode="light"] body, html[data-theme="light"] body {
+  background-color: var(--main-bg) !important; 
+}
+
+html[data-mode="dark"] body, html[data-theme="dark"] body {
+  background-color: var(--main-bg) !important; 
+}
+
+html[data-mode="light"] #sidebar, html[data-theme="light"] #sidebar {
+  background-color: var(--sidebar-bg) !important; 
+}
+
+html[data-mode="dark"] #sidebar, html[data-theme="dark"] #sidebar {
+  background-color: var(--sidebar-bg) !important; 
+}
+
+/* Ensure the body paragraphs are comfortably large */
+.post-content,
+.post-content p,
+.post-content li,
+.post-content td {
+  font-size: 1.25rem !important; 
+  line-height: 1.8 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading) !important;
+}
+
+/* Base Sketchy Borders & Components */
+.card, .post-preview, #sidebar, #topbar-wrapper, #search-input, .search-results, .post-content img, .tag, .pagination .page-item .page-link, .post-navigation .btn, #back-to-top {
+  border: 2px solid var(--text-color, currentColor) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+}
+
+/* Apply frames to related posts block at the bottom of the main article */
+.related-posts article {
+  border: 2px solid var(--text-color, currentColor) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
+  padding: 1rem !important;
+  margin-bottom: 1.75rem !important;
+}
+
+#toc-wrapper {
+  margin-top: 0 !important; 
+  top: 2rem !important; 
+}
+#toc-wrapper * {
+  background: transparent !important; /* Completely kills the white linear-gradient fade natively put by Chirpy */
+  background-image: none !important;
+  background-color: transparent !important;
+}
+#toc-wrapper .panel-heading {
+  margin-top: 0 !important;
+}
+
+/* Eliminate Chirpy's native transparent spacer which forces a gap */
+.toc-border-cover {
+  display: none !important;
+}
+
+#panel-wrapper > div {
+  border: none !important; 
+  box-shadow: none !important;
+}
+
+/* Preserve original position/sizing but add the sketched split line at the top */
+.sidebar-bottom {
+  border-top: 2px solid var(--text-color, currentColor) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  padding-top: 1rem !important;
+}
+
+.sidebar-bottom a:hover, #mode-toggle:hover {
+  transform: scale(1.2) !important;
+}
+
+/* Apply doodle to social logos and icons */
+i.fas, i.fab, i.far, i.fa-solid, i.fa-brands, i.fa-regular, .search-icon, #search-cancel {
+  filter: url('#sketchy-filter') !important;
+}
+
+/* Ensure Search Results use Doodle Font */
+#search-results, #search-results * {
+  font-family: var(--font-family-base) !important;
+}
+
+/* Clean up Search specific styling */
+#search {
+  border: 2px solid var(--text-color, currentColor) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  background-color: var(--main-bg, transparent);
+  box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
+  display: flex !important;
+  transform: translateX(12px) !important; 
+}
+
+#search-input {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Interactive Elements Hover state */
+.card:hover, .post-preview:hover, .btn:hover, .post-nav a:hover, .pagination .page-item:not(.disabled) .page-link:hover, .related-posts article:hover {
+  box-shadow: 4px 4px 0 var(--text-color, currentColor) !important;
+  transform: translate(-2px, -2px) rotate(-0.5deg) !important; /* Tiny organic tilt */
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Specific elements shadows */
+.card, .post-preview, .post-content img, .pagination .page-link {
+  box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
+}
+
+/* Make blockquote look like an Excalidraw note */
+blockquote:not([class^="prompt-"]) {
+  background: var(--blockquote-bg, rgba(0,0,0,0.05)) !important;
+  border-left: 4px solid var(--text-color, currentColor) !important;
+  padding-left: 1rem !important;
+}
+
+/* Ensure about page prompts look doodled correctly */
+[class^="prompt-"] {
+  border: 2px solid var(--text-color, currentColor) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
+  margin-bottom: 1rem;
+}
+
+/* Update Sidebar Profile */
+#sidebar #avatar {
+  border: 4px solid var(--text-color, currentColor) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  box-shadow: 4px 4px 0 var(--text-color, currentColor) !important;
+}
+
+#sidebar .profile-wrapper {
+  margin-top: 2rem;
+}
+
+#topbar-wrapper {
+  background-color: var(--sidebar-bg) !important; /* Fixes yellow/white clash on header */
+  border-bottom: 2px solid var(--text-color, currentColor) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+}
+
+#sidebar {
+  border-right: 2px solid var(--text-color, currentColor) !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-radius: 0 !important;
+}
+
+#search-trigger, #search-cancel {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Links underlining similar to sketchy highlight */
+a {
+  text-decoration: none !important;
+}
+
+.post-content a:not(.img-link) {
+  text-decoration: underline wavy var(--text-color, currentColor) !important;
+  text-underline-offset: 4px;
+}
+
+/* Footer sketchy line */
+footer {
+  border-top: 2px dashed var(--text-color, currentColor) !important;
+}
+
+/* Adjust search cancel layout */
+#search-cancel {
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem !important;
+}
+
+/* --- DOODLE CANVAS BACKGROUND --- */
+/* Utilizing a beautifully subtle CSS native dot-grid to replace the lost background images! */
+#sidebar {
+  background-color: transparent !important;
+}
+
+#sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  
+  /* Universe Doodle Backgrounds */
+  background-image: url('/assets/img/doodle_bg.png') !important;
+  background-repeat: repeat;
+  background-size: 300px;
+  opacity: 0.25 !important;
+  z-index: -1;
+  pointer-events: none;
+}
+
+html[data-mode="dark"] #sidebar::before, html[data-theme="dark"] #sidebar::before {
+  background-image: url('/assets/img/doodle_bg_dark.png') !important;
+  opacity: 0.25 !important;
+}
+
+/* TRULY Revert Left Sidebar to exactly the older version by locking it with static pixels */
+#sidebar #avatar {
+  width: 88px !important;  
+  height: 88px !important;
+}
+#sidebar .profile-wrapper {
+  margin-top: 32px !important; 
+}
+#sidebar .site-title a {
+  font-size: 28px !important;  
+}
+#sidebar .site-subtitle {
+  font-size: 16px !important;  
+}
+#sidebar .nav-link {
+  font-size: 20px !important;  
+  font-weight: 600;
+}
+.sidebar-bottom {
+  padding-top: 16px !important; 
+  flex-wrap: nowrap !important; 
+  justify-content: space-evenly !important;
+}
+
+/* Hardcode social icon sizes */
+.sidebar-bottom a, .sidebar-bottom button {
+  font-size: 18px !important; 
+}
+
+/* Home feature overrides so they are legible under Patrick Hand font */
+.post-preview h2, .post-preview h2 a {
+  font-size: 1.75rem !important;
+}
+.post-preview p, .post-preview .post-content p {
+  font-size: 1.25rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Frame Categories, Tags, and Share features together into a colorful footer note */
+.post-tail-wrapper {
+  border: 2px solid var(--text-color, currentColor) !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
+  padding: 1.5rem !important;
+  margin-top: 2.5rem !important;
+}
+
+html[data-mode="light"] .post-tail-wrapper, html[data-theme="light"] .post-tail-wrapper {
+  background-color: rgba(255, 152, 0, 0.1) !important; 
+}
+html[data-mode="dark"] .post-tail-wrapper, html[data-theme="dark"] .post-tail-wrapper {
+  background-color: rgba(255, 152, 0, 0.08) !important; 
+}
+
+/* Post Navigation Font Size */
+.post-navigation {
+  font-size: 1.8rem !important; 
+  text-decoration: none !important;
+}
+
+.post-navigation a, .post-navigation .btn, .post-navigation .btn p {
+  text-decoration: none !important;
+  border-bottom: none !important; 
+  box-shadow: none; 
+}
+
+.post-navigation .btn {
+  padding: 1rem 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: var(--sidebar-bg, #ffffff) !important; /* Forces white on light, dark on dark */
+  box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.post-navigation .btn:hover:not(.disabled) {
+  box-shadow: 4px 4px 0 var(--text-color, currentColor) !important;
+  transform: translate(-2px, -2px) !important;
+  background-color: rgba(33, 150, 243, 0.1) !important; 
+}
+
+.post-navigation .btn p {
+  margin-bottom: 0 !important;
+  font-size: inherit !important;
+}
+
+/* Doodle Style for Scroll to Top */
+#back-to-top {
+  box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
+  background-color: var(--main-bg, transparent) !important;
+  color: var(--text-color, currentColor) !important;
+}
+
+#back-to-top:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 4px 4px 0 var(--text-color, currentColor) !important;
+}
+
+/* Text Selection Highlighter */
+::selection {
+  background-color: rgba(255, 235, 59, 0.45) !important; /* Soft yellow highlighter marker */
+  color: inherit !important;
+}
+
+/* Sketchy Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-muted-color, rgba(0,0,0,0.5));
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; /* Stay sketchy! */
+  border: 3px solid var(--main-bg, #fffbf0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-color, currentColor);
+}
