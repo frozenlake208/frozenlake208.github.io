@@ -187,12 +187,13 @@ blockquote:not([class^="prompt-"]) {
 }
 
 #topbar-wrapper {
-  background-color: var(--sidebar-bg) !important; /* Fixes yellow/white clash on header */
-  border-bottom: 2px solid var(--text-color, currentColor) !important;
+  background-color: var(--main-bg) !important; /* Matches the yellow body — no more seam! */
+  border-bottom: 3px solid var(--text-color, currentColor) !important; /* Slightly heavier for a proper ink-drawn horizontal rule */
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
   border-radius: 0 !important;
+  transition: background-color 0.3s ease !important;
 }
 
 #sidebar {
@@ -201,6 +202,19 @@ blockquote:not([class^="prompt-"]) {
   border-bottom: none !important;
   border-left: none !important;
   border-radius: 0 !important;
+  transition: background-color 0.3s ease !important;
+}
+
+/* Active nav link accent */
+#sidebar .nav-item.active .nav-link {
+  font-weight: 800 !important;
+  text-decoration: underline wavy var(--text-color, currentColor) !important;
+  text-underline-offset: 3px !important;
+}
+
+/* Smooth theme transition globally */
+body, #sidebar, #topbar-wrapper, .card, .post-preview, .post-tail-wrapper {
+  transition: background-color 0.3s ease, color 0.3s ease !important;
 }
 
 #search-trigger, #search-cancel {
