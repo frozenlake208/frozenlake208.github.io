@@ -321,12 +321,12 @@ html[data-theme="dark"] blockquote:not([class^="prompt-"]) {
 
 html[data-mode="light"] #sidebar .nav-item .nav-link:hover,
 html[data-mode="light"] #sidebar .nav-item.active .nav-link {
-  background-color: rgba(255, 215, 0, 0.15) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important; /* Bold Dark Ink Marker */
 }
 
 html[data-mode="dark"] #sidebar .nav-item .nav-link:hover,
 html[data-mode="dark"] #sidebar .nav-item.active .nav-link {
-  background-color: rgba(255, 235, 59, 0.12) !important;
+  background-color: rgba(0, 0, 0, 0.35) !important; /* Deep Ink Shadow */
 }
 
 #sidebar .nav-item .nav-link {
