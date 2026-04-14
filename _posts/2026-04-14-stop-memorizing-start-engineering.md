@@ -8,7 +8,7 @@ tags: [introduction, build-from-scratch, backend]
 image: /assets/img/posts/2026-04-14-stop-memorizing-start-engineering/meme2.png
 ---
 
-## 👋 1. Introduction 
+## 👋 Introduction 
 
 Tbh, for the longest time, my learning routine looked exactly like this: read a ton of tech blogs, binge-watch system design videos, nod along to architectures... and absolutely never touch my keyboard to write a single line of code. 
 
@@ -20,7 +20,7 @@ Arggg, it hurts to say it out loud! But I realized I need to change my mindset i
 
 ![alt text](../assets/img/posts/2026-04-14-stop-memorizing-start-engineering/meme1.png)
 
-## 🛠️ 2. The Philosophy
+## 🛠️ The Philosophy
 
 So, what's the plan? We are going to build simplified, raw versions of these systems from scratch. 
 
@@ -28,7 +28,7 @@ Why? Because you don't truly respect a Mutex lock until you've watched two threa
 
 You only understand the value of an abstraction after you’ve felt the pain of living without it. By running into the exact same brick walls that the original creators hit, the theory finally clicks into place.
 
-## 🗺️ 3. The Roadmap 
+## 🗺️ The Roadmap 
 
 In this series, we are going to open up the black boxes of system design. Here is what we are going to build:
 
@@ -38,7 +38,7 @@ In this series, we are going to open up the black boxes of system design. Here i
 
 Time to switch from a read-only node to a primary write node. Let's get our hands dirty.
 
-## 🚀 4. What's Next? 
+## 🚀 What's Next? 
 
 Alright, enough talking. The whole point of this post is to stop reading and start coding, so I'll keep this short.
 
