@@ -14,9 +14,23 @@
   --font-family-heading: 'Patrick Hand', 'Comic Sans MS', cursive, sans-serif !important;
 }
 
-/* Universal Base Scale Up */
+/* Universal Base Scale Up - Responsive */
 html {
-  font-size: 19px !important; 
+  font-size: 17px !important; /* Smaller on mobile by default */
+}
+
+@media (min-width: 1201px) {
+  html {
+    font-size: 19px !important; /* Standard size for desktop */
+  }
+}
+
+@media (max-width: 1200px) {
+  html, body {
+    overflow-x: hidden !important; /* Kill the messy horizontal scroll */
+    position: relative;
+    width: 100%;
+  }
 }
 
 body {
@@ -205,7 +219,12 @@ i.fas, i.fab, i.far, i.fa-solid, i.fa-brands, i.fa-regular, .search-icon, #searc
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
   box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
   display: flex !important;
-  transform: translateX(12px) !important; 
+}
+
+@media (min-width: 1201px) {
+  #search {
+    transform: translateX(12px) !important; 
+  }
 }
 
 html[data-mode="light"] #search, html[data-theme="light"] #search {
@@ -371,35 +390,37 @@ html[data-mode="dark"] #sidebar::before, html[data-theme="dark"] #sidebar::befor
   opacity: 0.25 !important;
 }
 
-/* TRULY Revert Left Sidebar to exactly the older version by locking it with static pixels */
-#sidebar #avatar {
-  width: 88px !important;  
-  height: 88px !important;
-}
-#sidebar .profile-wrapper {
-  margin-top: 32px !important; 
-}
-#sidebar .site-title a {
-  font-size: 28px !important;  
-}
-#sidebar .site-subtitle {
-  font-size: 16px !important;  
-}
-#sidebar .nav-link {
-  font-size: 20px !important;  
-  font-weight: 600;
-  display: flex !important;
-  align-items: center !important;
-  padding: 0.5rem 1rem !important;
-}
-.sidebar-bottom {
-  padding-top: 16px !important; 
-  padding-left: 2.5rem !important;
-  padding-right: 2.5rem !important;
-  flex-wrap: nowrap !important; 
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 8px !important;
+@media (min-width: 1201px) {
+  /* TRULY Revert Left Sidebar to exactly the older version by locking it with static pixels */
+  #sidebar #avatar {
+    width: 88px !important;  
+    height: 88px !important;
+  }
+  #sidebar .profile-wrapper {
+    margin-top: 32px !important; 
+  }
+  #sidebar .site-title a {
+    font-size: 28px !important;  
+  }
+  #sidebar .site-subtitle {
+    font-size: 16px !important;  
+  }
+  #sidebar .nav-link {
+    font-size: 20px !important;  
+    font-weight: 600;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.5rem 1rem !important;
+  }
+  .sidebar-bottom {
+    padding-top: 16px !important; 
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+    flex-wrap: nowrap !important; 
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
 }
 
 /* Hardcode social icon sizes */
@@ -523,7 +544,7 @@ html[data-theme="dark"] .post-navigation .btn:last-child:hover {
   margin-bottom: 0 !important;
   font-size: 1.1rem !important;
   line-height: 1.4 !important;
-  white-space: nowrap;
+  white-space: normal; /* Allow wrapping on small screens */
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
@@ -561,4 +582,87 @@ html[data-theme="dark"] .post-navigation .btn:last-child:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-color, currentColor);
+}
+
+/* --- MOBILE SPECIFIC FIXES --- */
+@media (max-width: 1200px) {
+  #main-wrapper {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  #topbar-wrapper {
+    left: 0 !important;
+    width: 100% !important;
+    padding: 0 0.5rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  /* Hide the redundant search icon toggle since we show the input directly */
+  #search-trigger {
+    display: none !important;
+  }
+
+  /* Center title on mobile for cleaner look */
+  #topbar-title {
+    text-align: center;
+    width: 100%;
+    font-size: 1.25rem !important;
+  }
+
+  #search-wrapper {
+    width: 100% !important;
+    padding: 0 0.5rem !important;
+    /* Ensure it doesn't push the topbar too wide */
+    max-width: calc(100vw - 4rem) !important; 
+  }
+
+  #search {
+    width: 100% !important;
+    transform: none !important; /* Force reset translocations */
+  }
+
+  #search-input {
+    width: 100% !important;
+    font-size: 1rem !important;
+  }
+
+  .sidebar-bottom {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  #back-to-top {
+    right: 1.5rem !important;
+    bottom: 5rem !important;
+    width: 44px !important;
+    height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important; /* Rounder for mobile thumb */
+  }
+
+  /* Fix overlapping titles and long text in post previews */
+  .post-preview h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .post-preview .post-content {
+    font-size: 1.1rem !important;
+  }
+
+  /* Prevent post navigation from breaking */
+  .post-navigation .btn {
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
 }
