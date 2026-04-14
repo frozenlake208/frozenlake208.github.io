@@ -73,8 +73,52 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading) !important;
 }
 
+/* Add color accent to headings */
+html[data-mode="light"] h1, html[data-mode="light"] h2, html[data-mode="light"] h3,
+html[data-theme="light"] h1, html[data-theme="light"] h2, html[data-theme="light"] h3 {
+  color: #1e5f74 !important; /* Deep teal */
+}
+
+html[data-mode="dark"] h1, html[data-mode="dark"] h2, html[data-mode="dark"] h3,
+html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3 {
+  color: #48d1cc !important; /* Turquoise */
+}
+
+/* Colorful post tags */
+.post-tag {
+  transition: all 0.2s ease-in-out !important;
+}
+
+html[data-mode="light"] .post-tag,
+html[data-theme="light"] .post-tag {
+  background-color: rgba(30, 144, 255, 0.12) !important;
+  border-color: rgba(30, 144, 255, 0.4) !important;
+  color: #0a3d99 !important;
+}
+
+html[data-mode="light"] .post-tag:hover,
+html[data-theme="light"] .post-tag:hover {
+  background-color: rgba(30, 144, 255, 0.25) !important;
+  border-color: #1e90ff !important;
+  transform: translateY(-2px) !important;
+}
+
+html[data-mode="dark"] .post-tag,
+html[data-theme="dark"] .post-tag {
+  background-color: rgba(72, 209, 204, 0.15) !important;
+  border-color: rgba(72, 209, 204, 0.5) !important;
+  color: #48d1cc !important;
+}
+
+html[data-mode="dark"] .post-tag:hover,
+html[data-theme="dark"] .post-tag:hover {
+  background-color: rgba(72, 209, 204, 0.3) !important;
+  border-color: #48d1cc !important;
+  transform: translateY(-2px) !important;
+}
+
 /* Base Sketchy Borders & Components */
-.card, .post-preview, #sidebar, #topbar-wrapper, #search-input, .search-results, .post-content img, .tag, .pagination .page-item .page-link, .post-navigation .btn, #back-to-top {
+.card, .post-preview, #sidebar, #topbar-wrapper, #search-input, .search-results, .post-content img, .tag, .post-tag, .pagination .page-item .page-link, .post-navigation .btn, #back-to-top {
   border: 2px solid var(--text-color, currentColor) !important;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
 }
@@ -86,6 +130,29 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
   padding: 1rem !important;
   margin-bottom: 1.75rem !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+html[data-mode="light"] .related-posts article,
+html[data-theme="light"] .related-posts article {
+  background-color: rgba(255, 215, 0, 0.12) !important; /* Soft Gold/Yellow tint */
+  border-color: rgba(255, 193, 7, 0.4) !important;
+}
+
+html[data-mode="light"] .related-posts article:hover,
+html[data-theme="light"] .related-posts article:hover {
+  background-color: rgba(255, 215, 0, 0.2) !important;
+}
+
+html[data-mode="dark"] .related-posts article,
+html[data-theme="dark"] .related-posts article {
+  background-color: rgba(255, 235, 59, 0.1) !important; /* Soft Yellow tint */
+  border-color: rgba(255, 235, 59, 0.3) !important;
+}
+
+html[data-mode="dark"] .related-posts article:hover,
+html[data-theme="dark"] .related-posts article:hover {
+  background-color: rgba(255, 235, 59, 0.2) !important;
 }
 
 #toc-wrapper {
@@ -136,10 +203,16 @@ i.fas, i.fab, i.far, i.fa-solid, i.fa-brands, i.fa-regular, .search-icon, #searc
 #search {
   border: 2px solid var(--text-color, currentColor) !important;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
-  background-color: var(--main-bg, transparent);
   box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
   display: flex !important;
   transform: translateX(12px) !important; 
+}
+
+html[data-mode="light"] #search, html[data-theme="light"] #search {
+  background-color: rgba(255, 215, 0, 0.15) !important; /* Soft Amber tint */
+}
+html[data-mode="dark"] #search, html[data-theme="dark"] #search {
+  background-color: rgba(255, 235, 59, 0.12) !important; /* Soft Yellow tint */
 }
 
 #search-input {
@@ -165,6 +238,18 @@ blockquote:not([class^="prompt-"]) {
   background: var(--blockquote-bg, rgba(0,0,0,0.05)) !important;
   border-left: 4px solid var(--text-color, currentColor) !important;
   padding-left: 1rem !important;
+}
+
+html[data-mode="light"] blockquote:not([class^="prompt-"]),
+html[data-theme="light"] blockquote:not([class^="prompt-"]) {
+  background: rgba(30, 144, 255, 0.08) !important; /* Soft blue tint */
+  border-left: 5px solid rgba(30, 144, 255, 0.4) !important;
+}
+
+html[data-mode="dark"] blockquote:not([class^="prompt-"]),
+html[data-theme="dark"] blockquote:not([class^="prompt-"]) {
+  background: rgba(72, 209, 204, 0.12) !important; /* Soft turquoise tint */
+  border-left: 5px solid rgba(72, 209, 204, 0.5) !important;
 }
 
 /* Ensure about page prompts look doodled correctly */
@@ -206,10 +291,28 @@ blockquote:not([class^="prompt-"]) {
 }
 
 /* Active nav link accent */
+/* Sidebar Active/Hover styling with Yellow Sync (No Box) */
+#sidebar .nav-item .nav-link:hover,
 #sidebar .nav-item.active .nav-link {
   font-weight: 800 !important;
   text-decoration: underline wavy var(--text-color, currentColor) !important;
   text-underline-offset: 3px !important;
+  border: none !important;
+}
+
+html[data-mode="light"] #sidebar .nav-item .nav-link:hover,
+html[data-mode="light"] #sidebar .nav-item.active .nav-link {
+  background-color: rgba(255, 215, 0, 0.15) !important;
+}
+
+html[data-mode="dark"] #sidebar .nav-item .nav-link:hover,
+html[data-mode="dark"] #sidebar .nav-item.active .nav-link {
+  background-color: rgba(255, 235, 59, 0.12) !important;
+}
+
+#sidebar .nav-item .nav-link {
+  margin-bottom: 0.5rem;
+  transition: background-color 0.2s ease-in-out !important;
 }
 
 /* Smooth theme transition globally */
@@ -285,17 +388,43 @@ html[data-mode="dark"] #sidebar::before, html[data-theme="dark"] #sidebar::befor
 #sidebar .nav-link {
   font-size: 20px !important;  
   font-weight: 600;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0.5rem 1rem !important;
 }
 .sidebar-bottom {
   padding-top: 16px !important; 
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
   flex-wrap: nowrap !important; 
-  justify-content: space-evenly !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
 }
 
 /* Hardcode social icon sizes */
 .sidebar-bottom a, .sidebar-bottom button {
+  flex: 0 0 42px !important;
   font-size: 18px !important; 
+  width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  border: 2px solid var(--text-color, currentColor) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: var(--card-bg) !important;
+  box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
+  transition: all 0.2s ease-in-out !important;
 }
+
+.sidebar-bottom a:hover, .sidebar-bottom button:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 4px 4px 0 var(--text-color, currentColor) !important;
+}
+
+/* Remove the reordering */
 
 /* Home feature overrides so they are legible under Patrick Hand font */
 .post-preview h2, .post-preview h2 a {
@@ -315,16 +444,9 @@ html[data-mode="dark"] #sidebar::before, html[data-theme="dark"] #sidebar::befor
   margin-top: 2.5rem !important;
 }
 
-html[data-mode="light"] .post-tail-wrapper, html[data-theme="light"] .post-tail-wrapper {
-  background-color: rgba(255, 152, 0, 0.1) !important; 
-}
-html[data-mode="dark"] .post-tail-wrapper, html[data-theme="dark"] .post-tail-wrapper {
-  background-color: rgba(255, 152, 0, 0.08) !important; 
-}
-
 /* Post Navigation Font Size */
 .post-navigation {
-  font-size: 1.8rem !important; 
+  font-size: 1.1rem !important; 
   text-decoration: none !important;
 }
 
@@ -335,24 +457,76 @@ html[data-mode="dark"] .post-tail-wrapper, html[data-theme="dark"] .post-tail-wr
 }
 
 .post-navigation .btn {
-  padding: 1rem 2rem !important;
+  padding: 0.8rem 1rem !important;
   display: flex !important;
+  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  background-color: var(--sidebar-bg, #ffffff) !important; /* Forces white on light, dark on dark */
+  text-align: center !important;
+  background-color: var(--sidebar-bg, #ffffff) !important; /* Base fallback */
   box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
   transition: all 0.2s ease-in-out !important;
+}
+
+/* Distinct pastel colors for Older / Newer */
+html[data-mode="light"] .post-navigation .btn:first-child,
+html[data-theme="light"] .post-navigation .btn:first-child {
+  background-color: rgba(34, 139, 34, 0.08) !important; /* Soft forest green for older */
+}
+html[data-mode="dark"] .post-navigation .btn:first-child,
+html[data-theme="dark"] .post-navigation .btn:first-child {
+  background-color: rgba(72, 209, 204, 0.12) !important; /* Soft medium turquoise for older */
+}
+
+html[data-mode="light"] .post-navigation .btn:last-child,
+html[data-theme="light"] .post-navigation .btn:last-child {
+  background-color: rgba(30, 144, 255, 0.08) !important; /* Soft dodger blue for newer */
+}
+html[data-mode="dark"] .post-navigation .btn:last-child,
+html[data-theme="dark"] .post-navigation .btn:last-child {
+  background-color: rgba(135, 206, 250, 0.12) !important; /* Soft sky blue for newer */
+}
+
+/* Hover states with distinct colors */
+html[data-mode="light"] .post-navigation .btn:first-child:hover,
+html[data-theme="light"] .post-navigation .btn:first-child:hover {
+  background-color: rgba(34, 139, 34, 0.25) !important;
+  border-color: #228b22 !important;
+  color: #1a5c1a !important;
+}
+html[data-mode="dark"] .post-navigation .btn:first-child:hover,
+html[data-theme="dark"] .post-navigation .btn:first-child:hover {
+  background-color: rgba(72, 209, 204, 0.35) !important;
+  border-color: #48d1cc !important;
+  color: #fff !important;
+}
+
+html[data-mode="light"] .post-navigation .btn:last-child:hover,
+html[data-theme="light"] .post-navigation .btn:last-child:hover {
+  background-color: rgba(30, 144, 255, 0.25) !important;
+  border-color: #1e90ff !important;
+  color: #0a3d99 !important;
+}
+html[data-mode="dark"] .post-navigation .btn:last-child:hover,
+html[data-theme="dark"] .post-navigation .btn:last-child:hover {
+  background-color: rgba(135, 206, 250, 0.35) !important;
+  border-color: #87cefa !important;
+  color: #fff !important;
 }
 
 .post-navigation .btn:hover:not(.disabled) {
   box-shadow: 4px 4px 0 var(--text-color, currentColor) !important;
   transform: translate(-2px, -2px) !important;
-  background-color: rgba(33, 150, 243, 0.1) !important; 
 }
 
 .post-navigation .btn p {
   margin-bottom: 0 !important;
-  font-size: inherit !important;
+  font-size: 1.1rem !important;
+  line-height: 1.4 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 /* Doodle Style for Scroll to Top */
