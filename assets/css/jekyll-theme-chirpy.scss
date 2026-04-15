@@ -319,6 +319,23 @@ html[data-theme="dark"] blockquote:not([class^="prompt-"]) {
   border: none !important;
 }
 
+/* Verified Tick Styling */
+#sidebar .verified-tick {
+  color: #1da1f2 !important; /* Twitter Blue */
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.05rem; /* Moved closer to username */
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+#sidebar .v-tick-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+  filter: url('#sketchy-filter') !important;
+}
+
 html[data-mode="light"] #sidebar .nav-item .nav-link:hover,
 html[data-mode="light"] #sidebar .nav-item.active .nav-link {
   background-color: rgba(0, 0, 0, 0.12) !important; /* Bold Dark Ink Marker */
@@ -400,7 +417,10 @@ html[data-mode="dark"] #sidebar::before, html[data-theme="dark"] #sidebar::befor
     margin-top: 32px !important; 
   }
   #sidebar .site-title a {
-    font-size: 28px !important;  
+    font-size: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important; /* Align with the sidebar's end-alignment */
   }
   #sidebar .site-subtitle {
     font-size: 16px !important;  
