@@ -2,7 +2,7 @@
 title: "CS Fundamentals: Introduction"
 date: 2026-04-12 08:00:00 +0700
 categories: [CS Fundamentals 101]
-tags: [introduction, computer science]
+tags: [introduction, computer-science]
 # math: true # Enable when you need to write Big-O / formulas
 # mermaid: true # Enable when you need to draw diagrams
 image: /assets/img/posts/2026-04-12-CS-Fundamentals-Intro/cs-2.png

@@ -2,7 +2,7 @@
 title: "CS Fundamentals: Computer Architecture – CPUs, Memory, and Hardware Constraints"
 date: 2026-04-14 17:37:00 +0700
 categories: [CS Fundamentals 101]
-tags: [computer-architecture, computer science, hardware]
+tags: [computer-architecture, computer-science, hardware]
 math: true # Enable when you need to write Big-O / formulas
 mermaid: true # Enable when you need to draw diagrams
 image: /assets/img/posts/2026-04-14-computer-architecture/img1.png
