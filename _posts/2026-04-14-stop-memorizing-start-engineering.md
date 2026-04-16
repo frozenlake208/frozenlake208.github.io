@@ -1,7 +1,7 @@
 ---
 title: "Stop Memorizing, Start Engineering"
 date: 2026-04-14 08:29:00 +0700
-categories: [Engineering Mindset, System Design]
+categories: [Build From Scratch]
 tags: [introduction, build-from-scratch, backend]
 # math: true # Enable when you need to write Big-O / formulas
 # mermaid: true # Enable when you need to draw diagrams
