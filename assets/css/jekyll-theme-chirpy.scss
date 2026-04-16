@@ -686,3 +686,20 @@ html[data-theme="dark"] .post-navigation .btn:last-child:hover {
     margin-bottom: 0.5rem !important;
   }
 }
+
+
+/* --- ARCHIVES DATE SYNC --- */
+#archives .year {
+  font-family: var(--font-family-heading) !important;
+}
+
+#archives .date.day {
+  font-family: var(--font-family-base) !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+}
+
+#archives .date.month {
+  font-family: var(--font-family-base) !important;
+  font-size: 1.05rem !important;
+}
