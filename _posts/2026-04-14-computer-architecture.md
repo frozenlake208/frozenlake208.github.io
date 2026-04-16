@@ -1,5 +1,6 @@
 ---
 title: "CS Fundamentals: Computer Architecture – CPUs, Memory, and Hardware Constraints"
+description: "How Von Neumann architecture, CPUs, and memory hierarchy affect software performance"
 date: 2026-04-14 17:37:00 +0700
 categories: [CS Fundamentals 101]
 tags: [computer-architecture, computer-science, hardware]

@@ -1,6 +1,6 @@
 ---
 title: "Build Your Own Cache: Mutexes, TTL, and Surviving OOM Crashes"
-description: ""
+description: "Build an in-memory cache in Go with thread-safe operations and TTL eviction"
 date: 2026-04-16 08:35:00 +0700
 categories: [Build From Scratch]
 tags: [golang, caching, backend, build-from-scratch]

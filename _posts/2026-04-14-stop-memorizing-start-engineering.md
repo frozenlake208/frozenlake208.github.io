@@ -1,5 +1,6 @@
 ---
 title: "Stop Memorizing, Start Engineering"
+description: "Transition from read-only developer to mastering core system design from scratch"
 date: 2026-04-14 08:29:00 +0700
 categories: [Build From Scratch]
 tags: [introduction, build-from-scratch, backend]

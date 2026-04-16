@@ -132,9 +132,44 @@ html[data-theme="dark"] .post-tag:hover {
 }
 
 /* Base Sketchy Borders & Components */
-.card, .post-preview, #sidebar, #topbar-wrapper, #search-input, .search-results, .post-content img, .tag, .post-tag, .pagination .page-item .page-link, .post-navigation .btn, #back-to-top {
+.card, .post-preview, #sidebar, #topbar-wrapper, #search-input, .search-results, .tag, .post-tag, .pagination .page-item .page-link, .post-navigation .btn, #back-to-top {
   border: 2px solid var(--text-color, currentColor) !important;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+}
+
+/* Post content images: Centering, Layout & Styling */
+.content img,
+.content .img-link,
+.post-content img,
+.post-content .img-link {
+  display: block !important;
+  margin: 2rem auto !important; /* Proper centering mechanism */
+  width: fit-content !important;
+  max-width: 100% !important;
+  border: 1.5px solid #1a1a1a !important;
+  border-radius: 12px !important;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden !important;
+  transition: box-shadow 0.2s ease-in-out !important;
+
+  /* Reset theme's default centering to avoid conflicts */
+  left: 0 !important;
+  transform: none !important;
+}
+
+/* If image is inside a link, remove border/margin from the image itself */
+.content .img-link img,
+.post-content .img-link img {
+  border: none !important;
+  margin: 0 !important;
+  display: block !important; /* Remove baseline spacing issues */
+}
+
+.content img:hover,
+.content .img-link:hover,
+.post-content img:hover,
+.post-content .img-link:hover {
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25) !important;
 }
 
 /* Apply frames to related posts block at the bottom of the main article */
@@ -248,7 +283,7 @@ html[data-mode="dark"] #search, html[data-theme="dark"] #search {
 }
 
 /* Specific elements shadows */
-.card, .post-preview, .post-content img, .pagination .page-link {
+.card, .post-preview, .pagination .page-link {
   box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
 }
 
@@ -474,6 +509,12 @@ html[data-mode="dark"] #sidebar::before, html[data-theme="dark"] #sidebar::befor
 .post-preview p, .post-preview .post-content p {
   font-size: 1.25rem !important;
   line-height: 1.7 !important;
+}
+
+/* Post description font synchronization for detail page */
+.post-desc {
+  font-family: var(--font-family-base) !important;
+  font-size: 1.15rem !important;
 }
 
 /* Frame Categories, Tags, and Share features together into a colorful footer note */

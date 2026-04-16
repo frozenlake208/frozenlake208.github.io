@@ -1,5 +1,6 @@
 ---
 title: "CS Fundamentals: Introduction"
+description: "Foundation for CS fundamentals: hardware, software, networking, and security"
 date: 2026-04-12 08:00:00 +0700
 categories: [CS Fundamentals 101]
 tags: [introduction, computer-science]
