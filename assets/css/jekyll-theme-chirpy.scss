@@ -38,6 +38,14 @@ body {
   line-height: 1.7 !important;
 }
 
+/* Global Catch-all for UI Components that might reset font */
+button, input, textarea, select, .label, .tooltip, .popover, 
+#toc-popup-content, #toc-popup-content *, 
+.dropdown-menu, .dropdown-item, .modal-content, 
+.nav-link, .menu-item, .sidebar-bottom, .topbar-wrapper * {
+  font-family: var(--font-family-base) !important;
+}
+
 /* Global Color Variable Overrides for Perfect Synchronization */
 html[data-mode="light"], html[data-theme="light"] {
   --main-bg: #fff4cc !important; /* Body yellow */
@@ -665,6 +673,11 @@ html[data-theme="dark"] .post-navigation .btn:last-child:hover {
     text-align: center;
     width: 100%;
     font-size: 1.25rem !important;
+    font-family: var(--font-family-heading) !important;
+  }
+
+  /* Sync font for "Contents" label on mobile */
+  .label, #toc-bar .label {
     font-family: var(--font-family-heading) !important;
   }
 
