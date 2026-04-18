@@ -418,28 +418,19 @@ footer {
 }
 
 /* --- DOODLE CANVAS BACKGROUND --- */
-/* Utilizing a beautifully subtle CSS native dot-grid to replace the lost background images! */
-#sidebar {
-  background-color: transparent !important;
+/* Integrated directly into the sidebar to ensure full scroll height coverage without pseudo-element limits */
+html[data-mode="light"] #sidebar, html[data-theme="light"] #sidebar {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('/assets/img/doodle_bg.png') !important;
+  background-repeat: repeat !important;
+  background-size: auto, 300px !important;
+  background-attachment: local !important;
 }
 
-#sidebar::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  
-  /* Universe Doodle Backgrounds */
-  background-image: url('/assets/img/doodle_bg.png') !important;
-  background-repeat: repeat;
-  background-size: 300px;
-  opacity: 0.25 !important;
-  z-index: -1;
-  pointer-events: none;
-}
-
-html[data-mode="dark"] #sidebar::before, html[data-theme="dark"] #sidebar::before {
-  background-image: url('/assets/img/doodle_bg_dark.png') !important;
-  opacity: 0.25 !important;
+html[data-mode="dark"] #sidebar, html[data-theme="dark"] #sidebar {
+  background-image: linear-gradient(rgba(27, 27, 30, 0.75), rgba(27, 27, 30, 0.75)), url('/assets/img/doodle_bg_dark.png') !important;
+  background-repeat: repeat !important;
+  background-size: auto, 300px !important;
+  background-attachment: local !important;
 }
 
 @media (min-width: 1201px) {
