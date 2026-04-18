@@ -106,6 +106,29 @@ html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] 
   color: #48d1cc !important; /* Turquoise */
 }
 
+/* Sketchy horizontal rule (hr) */
+hr {
+  border: none !important;
+  border-top: 2px dashed var(--text-color, currentColor) !important;
+  opacity: 0.4 !important;
+  margin: 2.5rem 0 !important;
+}
+
+/* Subtle sketchy underline for H2 to separate sections elegantly */
+.post-content h2 {
+  border-bottom: 2px dashed var(--text-color, currentColor) !important;
+  padding-bottom: 0.4rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+html[data-mode="light"] .post-content h2, html[data-theme="light"] .post-content h2 {
+  border-bottom-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+html[data-mode="dark"] .post-content h2, html[data-theme="dark"] .post-content h2 {
+  border-bottom-color: rgba(255, 255, 255, 0.15) !important;
+}
+
 /* Colorful post tags */
 .post-tag {
   transition: all 0.2s ease-in-out !important;
@@ -181,35 +204,38 @@ html[data-theme="dark"] .post-tag:hover {
 }
 
 /* Apply frames to related posts block at the bottom of the main article */
-.related-posts article {
+#related-posts .card {
   border: 2px solid var(--text-color, currentColor) !important;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
   box-shadow: 2px 2px 0 var(--text-color, currentColor) !important;
-  padding: 1rem !important;
-  margin-bottom: 1.75rem !important;
   transition: all 0.2s ease-in-out !important;
 }
 
-html[data-mode="light"] .related-posts article,
-html[data-theme="light"] .related-posts article {
-  background-color: rgba(255, 215, 0, 0.12) !important; /* Soft Gold/Yellow tint */
-  border-color: rgba(255, 193, 7, 0.4) !important;
+/* Ensure inner card-body doesn't override the card background */
+#related-posts .card .card-body {
+  background-color: transparent !important;
 }
 
-html[data-mode="light"] .related-posts article:hover,
-html[data-theme="light"] .related-posts article:hover {
-  background-color: rgba(255, 215, 0, 0.2) !important;
+/* Distinct Highlighter for Light Mode */
+html[data-mode="light"] #related-posts .card,
+html[data-theme="light"] #related-posts .card {
+  background-color: rgba(255, 215, 0, 0.15) !important; /* Soft Amber tint matching search */
 }
 
-html[data-mode="dark"] .related-posts article,
-html[data-theme="dark"] .related-posts article {
-  background-color: rgba(255, 235, 59, 0.1) !important; /* Soft Yellow tint */
-  border-color: rgba(255, 235, 59, 0.3) !important;
+html[data-mode="light"] #related-posts .card:hover,
+html[data-theme="light"] #related-posts .card:hover {
+  background-color: rgba(255, 215, 0, 0.25) !important;
 }
 
-html[data-mode="dark"] .related-posts article:hover,
-html[data-theme="dark"] .related-posts article:hover {
-  background-color: rgba(255, 235, 59, 0.2) !important;
+/* Distinct Highlighter for Dark Mode */
+html[data-mode="dark"] #related-posts .card,
+html[data-theme="dark"] #related-posts .card {
+  background-color: rgba(255, 235, 59, 0.12) !important; /* Soft Yellow tint matching search */
+}
+
+html[data-mode="dark"] #related-posts .card:hover,
+html[data-theme="dark"] #related-posts .card:hover {
+  background-color: rgba(255, 235, 59, 0.25) !important;
 }
 
 #toc-wrapper {

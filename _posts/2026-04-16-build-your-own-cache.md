@@ -76,6 +76,8 @@ fatal error: concurrent map writes
 
 Our raw cache is completely unsafe for production. To fix this, we need to physically force the CPU threads to wait in line. We need a Mutex.
 
+---
+
 ## 🔒 Fixing the Crash: Mutex Locks
 To stop the race condition, we need to guarantee that only one goroutine can mutate our map at any given time. We do this using a **Mutex** (Mutual Exclusion).
 

@@ -21,6 +21,8 @@ Arggg, it hurts to say it out loud! But I realized I need to change my mindset i
 
 ![alt text](../assets/img/posts/2026-04-14-stop-memorizing-start-engineering/meme1.png)
 
+---
+
 ## 🛠️ The Philosophy
 
 So, what's the plan? We are going to build simplified, raw versions of these systems from scratch. 
@@ -28,6 +30,8 @@ So, what's the plan? We are going to build simplified, raw versions of these sys
 Why? Because you don't truly respect a Mutex lock until you've watched two threads casually corrupt your data at the exact same time. You don't understand why Eviction Policies matter until your toy cache eats **100%** of your RAM and your OS forcefully kills the process.
 
 You only understand the value of an abstraction after you’ve felt the pain of living without it. By running into the exact same brick walls that the original creators hit, the theory finally clicks into place.
+
+---
 
 ## 🗺️ The Roadmap 
 
@@ -38,6 +42,8 @@ In this series, we are going to open up the black boxes of system design. Here i
 * 💡 **Build your own Database:** Moving from RAM to disk. We will intentionally crash our program mid-write to see data corruption in action—and then fix it by implementing our own Write-Ahead Log (WAL).
 
 Time to switch from a read-only node to a primary write node. Let's get our hands dirty.
+
+---
 
 ## 🚀 What's Next? 
 
