@@ -45,26 +45,7 @@ You cannot reach `B+1` from `A`. More importantly, **you cannot reach `B+1` from
 
 *Optimization:* Because every station between `A` and `B` is mathematically guaranteed to fail, do not test them. Skip the entire failure window and set your next potential starting station directly to `B+1`.
 
-## ⚙️ 3. The Algorithm Execution
-
-We can translate the two greedy rules directly into a single-pass loop. We only need three integer variables to track the state memory-efficiently:
-
-* **`total_tank`**: Tracks the cumulative sum of `gas[i] - cost[i]` for the entire array. This evaluates Rule 1.
-* **`current_tank`**: Tracks the running balance of gas for the current trip attempt. This evaluates Rule 2.
-* **`start_index`**: A pointer recording our currently assumed starting station.
-
-### Step-by-Step Logic
-1. **Initialize Variables:** Set `total_tank = 0`, `current_tank = 0`, and `start_index = 0`.
-2. **Iterate:** Loop through each station `i` from $0$ to $N-1$.
-3. **Calculate Net Gas:** At each station, determine the net fuel gain or loss: `gas[i] - cost[i]`. Add this value to both `total_tank` and `current_tank`.
-4. **Evaluate the Failure Window:** If `current_tank` drops below `0`, it means traveling from the current `start_index` to `i+1` is physically impossible. 
-    * Reset `current_tank` to `0` (prepare for a fresh trip).
-    * Update `start_index` to `i + 1` (skip the entire failure window and test the next available station).
-5. **The Global Check:** Once the loop completes, inspect `total_tank`. 
-    * If `total_tank < 0`, a full circuit is mathematically impossible. Return `-1`. 
-    * Otherwise, return the `start_index`.
-
---- 
+---
 
 ## ⚙️ 3. The Algorithm Execution (Single Pass)
 
