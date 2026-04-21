@@ -9,7 +9,7 @@ mermaid: true # Enable when you need to draw diagrams
 image: https://sciencevikinglabs.com/assets/img/development/generated-header-images/header.png
 ---
 
-## 🎯 1. Problem Breakdown: The Circular Route
+## 🎯 1. Problem Breakdown
 
 [Gas Station - LeetCode](https://leetcode.com/problems/gas-station/)
 
