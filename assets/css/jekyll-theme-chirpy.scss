@@ -760,6 +760,32 @@ html[data-theme="dark"] .post-navigation .btn:last-child:hover {
 }
 
 
+/* --- KEEP SOCIAL ICONS ALWAYS VISIBLE (NO SIDEBAR SCROLL) --- */
+/* Turn the sidebar into a fixed header / scrolling-nav / fixed footer layout.
+   Only the nav list scrolls, so the profile and the social icons at the bottom
+   stay in view on every device regardless of viewport height. */
+#sidebar {
+  overflow-y: hidden !important; /* stop the whole sidebar from scrolling */
+}
+
+#sidebar > nav {
+  flex: 1 1 auto !important;
+  min-height: 0 !important; /* allow the flex child to shrink so it can scroll */
+  overflow-y: auto !important;
+  /* Hide the inner scrollbar to match the theme's clean look */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+#sidebar > nav::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+#sidebar .profile-wrapper,
+#sidebar .sidebar-bottom {
+  flex-shrink: 0 !important; /* never let header/footer be squeezed or pushed off */
+}
+
 /* --- ARCHIVES DATE SYNC --- */
 #archives .year {
   font-family: var(--font-family-heading) !important;
