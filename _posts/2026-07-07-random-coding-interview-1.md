@@ -42,7 +42,7 @@ The question to figure out is *not* "Does a square of size k **start** here?" Th
 
 Why the bottom-right corner? Because if we sweep the grid top-to-bottom, left-to-right, then by the time we reach a cell, its three relevant neighbors — the one above, the one to the left, and the one diagonally up-left — are already solved. We only ever depend on answers we've already computed.
 
-### Step 4 — What does "a square ending here" depend on?
+### Step 4 — What does a square ending matter?
 
 Let `dp[i][j]` be the side length of the largest square whose bottom-right corner is cell `(i, j)`.
 
