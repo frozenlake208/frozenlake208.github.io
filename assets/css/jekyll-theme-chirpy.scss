@@ -47,14 +47,14 @@ button, input, textarea, select, .label, .tooltip, .popover,
 }
 
 /* Global Color Variable Overrides for Perfect Synchronization */
-html[data-mode="light"], html[data-theme="light"] {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]), html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) {
   --main-bg: #fff4cc !important; /* Body yellow */
   --card-bg: #fff4cc !important;
   --sidebar-bg: #ffffff !important; /* Sidebar & Utility White */
   --sidebar-text-strong: #000000 !important;
 }
 
-html[data-mode="dark"], html[data-theme="dark"] {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]), html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) {
   --main-bg: #1a1a1c !important; 
   --card-bg: #1a1a1c !important;
   --sidebar-bg: #1b1b1e !important;
@@ -66,19 +66,19 @@ html[data-mode="dark"], html[data-theme="dark"] {
   color: var(--sidebar-text-strong) !important;
 }
 
-html[data-mode="light"] body, html[data-theme="light"] body {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) body, html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) body {
   background-color: var(--main-bg) !important; 
 }
 
-html[data-mode="dark"] body, html[data-theme="dark"] body {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) body, html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) body {
   background-color: var(--main-bg) !important; 
 }
 
-html[data-mode="light"] #sidebar, html[data-theme="light"] #sidebar {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #sidebar, html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #sidebar {
   background-color: var(--sidebar-bg) !important; 
 }
 
-html[data-mode="dark"] #sidebar, html[data-theme="dark"] #sidebar {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #sidebar, html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #sidebar {
   background-color: var(--sidebar-bg) !important; 
 }
 
@@ -96,13 +96,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Add color accent to headings */
-html[data-mode="light"] h1, html[data-mode="light"] h2, html[data-mode="light"] h3,
-html[data-theme="light"] h1, html[data-theme="light"] h2, html[data-theme="light"] h3 {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) h1, html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) h2, html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) h3,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) h1, html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) h2, html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) h3 {
   color: #1e5f74 !important; /* Deep teal */
 }
 
-html[data-mode="dark"] h1, html[data-mode="dark"] h2, html[data-mode="dark"] h3,
-html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3 {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) h1, html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) h2, html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) h3,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) h1, html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) h2, html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) h3 {
   color: #48d1cc !important; /* Turquoise */
 }
 
@@ -121,11 +121,11 @@ hr {
   margin-bottom: 1.5rem !important;
 }
 
-html[data-mode="light"] .post-content h2, html[data-theme="light"] .post-content h2 {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-content h2, html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-content h2 {
   border-bottom-color: rgba(0, 0, 0, 0.15) !important;
 }
 
-html[data-mode="dark"] .post-content h2, html[data-theme="dark"] .post-content h2 {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-content h2, html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-content h2 {
   border-bottom-color: rgba(255, 255, 255, 0.15) !important;
 }
 
@@ -134,29 +134,29 @@ html[data-mode="dark"] .post-content h2, html[data-theme="dark"] .post-content h
   transition: all 0.2s ease-in-out !important;
 }
 
-html[data-mode="light"] .post-tag,
-html[data-theme="light"] .post-tag {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-tag,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-tag {
   background-color: rgba(30, 144, 255, 0.12) !important;
   border-color: rgba(30, 144, 255, 0.4) !important;
   color: #0a3d99 !important;
 }
 
-html[data-mode="light"] .post-tag:hover,
-html[data-theme="light"] .post-tag:hover {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-tag:hover,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-tag:hover {
   background-color: rgba(30, 144, 255, 0.25) !important;
   border-color: #1e90ff !important;
   transform: translateY(-2px) !important;
 }
 
-html[data-mode="dark"] .post-tag,
-html[data-theme="dark"] .post-tag {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-tag,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-tag {
   background-color: rgba(72, 209, 204, 0.15) !important;
   border-color: rgba(72, 209, 204, 0.5) !important;
   color: #48d1cc !important;
 }
 
-html[data-mode="dark"] .post-tag:hover,
-html[data-theme="dark"] .post-tag:hover {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-tag:hover,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-tag:hover {
   background-color: rgba(72, 209, 204, 0.3) !important;
   border-color: #48d1cc !important;
   transform: translateY(-2px) !important;
@@ -217,24 +217,24 @@ html[data-theme="dark"] .post-tag:hover {
 }
 
 /* Distinct Highlighter for Light Mode */
-html[data-mode="light"] #related-posts .card,
-html[data-theme="light"] #related-posts .card {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #related-posts .card,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #related-posts .card {
   background-color: rgba(255, 215, 0, 0.15) !important; /* Soft Amber tint matching search */
 }
 
-html[data-mode="light"] #related-posts .card:hover,
-html[data-theme="light"] #related-posts .card:hover {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #related-posts .card:hover,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #related-posts .card:hover {
   background-color: rgba(255, 215, 0, 0.25) !important;
 }
 
 /* Distinct Highlighter for Dark Mode */
-html[data-mode="dark"] #related-posts .card,
-html[data-theme="dark"] #related-posts .card {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #related-posts .card,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #related-posts .card {
   background-color: rgba(255, 235, 59, 0.12) !important; /* Soft Yellow tint matching search */
 }
 
-html[data-mode="dark"] #related-posts .card:hover,
-html[data-theme="dark"] #related-posts .card:hover {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #related-posts .card:hover,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #related-posts .card:hover {
   background-color: rgba(255, 235, 59, 0.25) !important;
 }
 
@@ -296,10 +296,10 @@ i.fas, i.fab, i.far, i.fa-solid, i.fa-brands, i.fa-regular, .search-icon, #searc
   }
 }
 
-html[data-mode="light"] #search, html[data-theme="light"] #search {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #search, html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #search {
   background-color: rgba(255, 215, 0, 0.15) !important; /* Soft Amber tint */
 }
-html[data-mode="dark"] #search, html[data-theme="dark"] #search {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #search, html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #search {
   background-color: rgba(255, 235, 59, 0.12) !important; /* Soft Yellow tint */
 }
 
@@ -328,14 +328,14 @@ blockquote:not([class^="prompt-"]) {
   padding-left: 1rem !important;
 }
 
-html[data-mode="light"] blockquote:not([class^="prompt-"]),
-html[data-theme="light"] blockquote:not([class^="prompt-"]) {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) blockquote:not([class^="prompt-"]),
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) blockquote:not([class^="prompt-"]) {
   background: rgba(30, 144, 255, 0.08) !important; /* Soft blue tint */
   border-left: 5px solid rgba(30, 144, 255, 0.4) !important;
 }
 
-html[data-mode="dark"] blockquote:not([class^="prompt-"]),
-html[data-theme="dark"] blockquote:not([class^="prompt-"]) {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) blockquote:not([class^="prompt-"]),
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) blockquote:not([class^="prompt-"]) {
   background: rgba(72, 209, 204, 0.12) !important; /* Soft turquoise tint */
   border-left: 5px solid rgba(72, 209, 204, 0.5) !important;
 }
@@ -405,13 +405,13 @@ html[data-theme="dark"] blockquote:not([class^="prompt-"]) {
   filter: url('#sketchy-filter') !important;
 }
 
-html[data-mode="light"] #sidebar .nav-item .nav-link:hover,
-html[data-mode="light"] #sidebar .nav-item.active .nav-link {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #sidebar .nav-item .nav-link:hover,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #sidebar .nav-item.active .nav-link {
   background-color: rgba(0, 0, 0, 0.12) !important; /* Bold Dark Ink Marker */
 }
 
-html[data-mode="dark"] #sidebar .nav-item .nav-link:hover,
-html[data-mode="dark"] #sidebar .nav-item.active .nav-link {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #sidebar .nav-item .nav-link:hover,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #sidebar .nav-item.active .nav-link {
   background-color: rgba(0, 0, 0, 0.35) !important; /* Deep Ink Shadow */
 }
 
@@ -453,14 +453,14 @@ footer {
 
 /* --- DOODLE CANVAS BACKGROUND --- */
 /* Integrated directly into the sidebar to ensure full scroll height coverage without pseudo-element limits */
-html[data-mode="light"] #sidebar, html[data-theme="light"] #sidebar {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #sidebar, html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) #sidebar {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('/assets/img/doodle_bg.png') !important;
   background-repeat: repeat !important;
   background-size: auto, 300px !important;
   background-attachment: local !important;
 }
 
-html[data-mode="dark"] #sidebar, html[data-theme="dark"] #sidebar {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #sidebar, html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) #sidebar {
   background-image: linear-gradient(rgba(27, 27, 30, 0.75), rgba(27, 27, 30, 0.75)), url('/assets/img/doodle_bg_dark.png') !important;
   background-repeat: repeat !important;
   background-size: auto, 300px !important;
@@ -576,46 +576,46 @@ html[data-mode="dark"] #sidebar, html[data-theme="dark"] #sidebar {
 }
 
 /* Distinct pastel colors for Older / Newer */
-html[data-mode="light"] .post-navigation .btn:first-child,
-html[data-theme="light"] .post-navigation .btn:first-child {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-navigation .btn:first-child,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-navigation .btn:first-child {
   background-color: rgba(34, 139, 34, 0.08) !important; /* Soft forest green for older */
 }
-html[data-mode="dark"] .post-navigation .btn:first-child,
-html[data-theme="dark"] .post-navigation .btn:first-child {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-navigation .btn:first-child,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-navigation .btn:first-child {
   background-color: rgba(72, 209, 204, 0.12) !important; /* Soft medium turquoise for older */
 }
 
-html[data-mode="light"] .post-navigation .btn:last-child,
-html[data-theme="light"] .post-navigation .btn:last-child {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-navigation .btn:last-child,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-navigation .btn:last-child {
   background-color: rgba(30, 144, 255, 0.08) !important; /* Soft dodger blue for newer */
 }
-html[data-mode="dark"] .post-navigation .btn:last-child,
-html[data-theme="dark"] .post-navigation .btn:last-child {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-navigation .btn:last-child,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-navigation .btn:last-child {
   background-color: rgba(135, 206, 250, 0.12) !important; /* Soft sky blue for newer */
 }
 
 /* Hover states with distinct colors */
-html[data-mode="light"] .post-navigation .btn:first-child:hover,
-html[data-theme="light"] .post-navigation .btn:first-child:hover {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-navigation .btn:first-child:hover,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-navigation .btn:first-child:hover {
   background-color: rgba(34, 139, 34, 0.25) !important;
   border-color: #228b22 !important;
   color: #1a5c1a !important;
 }
-html[data-mode="dark"] .post-navigation .btn:first-child:hover,
-html[data-theme="dark"] .post-navigation .btn:first-child:hover {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-navigation .btn:first-child:hover,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-navigation .btn:first-child:hover {
   background-color: rgba(72, 209, 204, 0.35) !important;
   border-color: #48d1cc !important;
   color: #fff !important;
 }
 
-html[data-mode="light"] .post-navigation .btn:last-child:hover,
-html[data-theme="light"] .post-navigation .btn:last-child:hover {
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-navigation .btn:last-child:hover,
+html:is([data-mode="light"],[data-theme="light"],[data-bs-theme="light"]) .post-navigation .btn:last-child:hover {
   background-color: rgba(30, 144, 255, 0.25) !important;
   border-color: #1e90ff !important;
   color: #0a3d99 !important;
 }
-html[data-mode="dark"] .post-navigation .btn:last-child:hover,
-html[data-theme="dark"] .post-navigation .btn:last-child:hover {
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-navigation .btn:last-child:hover,
+html:is([data-mode="dark"],[data-theme="dark"],[data-bs-theme="dark"]) .post-navigation .btn:last-child:hover {
   background-color: rgba(135, 206, 250, 0.35) !important;
   border-color: #87cefa !important;
   color: #fff !important;
